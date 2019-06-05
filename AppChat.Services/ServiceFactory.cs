@@ -18,7 +18,7 @@ namespace AppChat.Services
 			_cacheService.AddAsync(obj);
 		}
 
-		public static IChatMessageService Create(Action<ChatMessage> onMessageRecieved = null)
+		public static IChatMessageService Create(Action<ChatMessage> onMessageReceived = null)
 		{
 			//Not good 
 			var instance =  new ChatMessageService(_queueService, _cacheService);
