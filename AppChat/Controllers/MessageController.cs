@@ -25,7 +25,7 @@ namespace AppChat.Controllers
 	    [EnableCors(origins: "*", headers: "*", methods: "*")]
         public async Task<IEnumerable<ChatMessage>> GetAsync(DateTime timeStamp)
         {
-	        var res = await service.GetAsync(timeStamp);
+	        var res = await service.GetAsync(timeStamp.ToUniversalTime());
 
 	        return res;
         }

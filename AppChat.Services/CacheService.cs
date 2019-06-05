@@ -29,7 +29,7 @@ namespace AppChat.Abstraction.Model
 
 			var res = values
 				.OfType<ChatMessage>()
-				.Where(x=>x.DateStamp >= lastTimeStamp)
+				.Where(x=>x.DateStamp >= lastTimeStamp.ToUniversalTime())
 				.ToArray();
 
 				//.Select(x => x.Value)
