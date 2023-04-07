@@ -2375,7 +2375,3 @@ if (typeof jQuery === 'undefined') {
   })
 
 }(jQuery);
-
-jQuery.htmlPrefilter = function( html ) {
-	return html;
-};
